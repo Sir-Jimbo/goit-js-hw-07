@@ -22,8 +22,7 @@ const images = [
 // Для создания разметки используй шаблонные строки и insertAdjacentHTML().
 let result = ``;
 images.forEach(
-  (image) =>
-    (result += `<li><img src="${image.url}" alt="${image.alt}" /></li>`)
+  ({ url, alt }) => (result += `<li><img src="${url}" alt="${alt}" /></li>`)
 );
 
 //Все элементы галереи должны добавляться в DOM за одну операцию вставки.
