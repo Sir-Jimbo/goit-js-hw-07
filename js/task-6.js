@@ -5,9 +5,10 @@
 //если неправильное - красным.
 
 const validationInput = document.querySelector("#validation-input");
+const dataLength = Number(validationInput.dataset.length);
 
 function validationInputBlur() {
-  if (validationInput.value.length === 6) {
+  if (validationInput.value.length === dataLength) {
     validationInput.classList.add("valid");
     validationInput.classList.remove("invalid");
   } else {
